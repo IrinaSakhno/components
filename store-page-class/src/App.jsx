@@ -1,4 +1,4 @@
-import ShopItemClass from "./components/ShopItemClass/ShopItemClass";
+import ShopItemClass from "./components/ShopItemClass/ShopItemClass.jsx";
 import "./App.css";
 
 function App() {
