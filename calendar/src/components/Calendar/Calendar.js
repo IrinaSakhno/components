@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import classNames from "classnames";
 import "moment/locale/ru";
-import "./Calendar.css";
+import "../../App.css";
 
 const Calendar = () => {
   const months = [
@@ -28,18 +28,18 @@ const Calendar = () => {
   const dates = [];
   // Добавляем даты предыдущего месяца в массив
   for (let i = 0; i < previousMonthDaysThisWeek; i++) {
-    dates.unshift({date: daysInPreviousMonth - i, isOtherMonth: true});
+    dates.unshift({ date: daysInPreviousMonth - i, isOtherMonth: true });
   }
   // Добавляем даты текущего месяца в массив
   for (let i = 1; i < daysInThisMonth + 1; i++) {
-    dates.push({date: i, isToday: i === moment().get("date")});
+    dates.push({ date: i, isToday: i === moment().get("date") });
   }
   // Сколько всего недель необходимо в календаре
   const weeksNeeded = Math.ceil(dates.length / 7);
   // Считаем и добавляем даты следующего месяца в массив
   const daysNextMonthQuantity = weeksNeeded * 7 - dates.length;
   for (let i = 1; i < daysNextMonthQuantity + 1; i++) {
-    dates.push({date: i, isOtherMonth: true});
+    dates.push({ date: i, isOtherMonth: true });
   }
 
   // Массив с массивами дат по неделям
@@ -54,7 +54,16 @@ const Calendar = () => {
       return (
         <tr>
           {week.map((day) => {
-            return <td className={classNames(day.isOtherMonth && "ui-datepicker-other-month", day.isToday && "ui-datepicker-today")}>{day.date}</td>;
+            return (
+              <td
+                className={classNames(
+                  day.isOtherMonth && "ui-datepicker-other-month",
+                  day.isToday && "ui-datepicker-today"
+                )}
+              >
+                {day.date}
+              </td>
+            );
           })}
         </tr>
       );
@@ -124,9 +133,7 @@ const Calendar = () => {
               </th>
             </tr>
           </thead>
-          <tbody>
-            {renderDates(weeks)}
-          </tbody>
+          <tbody>{renderDates(weeks)}</tbody>
         </table>
       </div>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./ShopItemFunc.css";
+import "../../App.css";
 
 const ShopItemFunc = ({ item }) => {
   return (

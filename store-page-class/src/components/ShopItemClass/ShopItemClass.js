@@ -1,13 +1,13 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import "./ShopItemClass.css";
+import PropTypes from "prop-types";
+import "../../App.css";
 
 class ShopItemClass extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
+  render() {
     return (
       <div className="main-content">
         <h2>{this.props.brand}</h2>
@@ -31,12 +31,12 @@ class ShopItemClass extends React.Component {
 }
 
 ShopItemClass.propTypes = {
-    brand: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    descriptionFull: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired
-}
+  brand: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  descriptionFull: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+};
 
 export default ShopItemClass;

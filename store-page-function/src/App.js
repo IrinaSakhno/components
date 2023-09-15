@@ -1,5 +1,6 @@
-import ShopItemClass from "./components/ShopItemClass/ShopItemClass";
-import "./components/ShopItemClass/ShopItemClass.css";
+import React from "react";
+import "./App.css";
+import ShopItemFunc from "./components/ShopItemFunc/ShopItemFunc";
 
 function App() {
   const item = {
@@ -9,7 +10,7 @@ function App() {
     descriptionFull:
       "Men's minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.",
     price: 399,
-    currency: "£"
+    currency: "£",
   };
 
   return (
@@ -19,7 +20,7 @@ function App() {
         <div className="highlight-overlay"></div>
       </div>
       <div className="window">
-        <ShopItemClass {...item} />
+        <ShopItemFunc item={item} />
       </div>
     </div>
   );
