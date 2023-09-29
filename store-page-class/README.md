@@ -6,7 +6,7 @@
 
 
 ## Установка и запуск приложения на локальной машине:
-1. `git clone [https://github.com/IrinaSakhno/react-mesto-api-full-gha.git](https://github.com/IrinaSakhno/components.git)` - клонировать репозиторий на свое устройство
+1. `git clone https://github.com/IrinaSakhno/components.git` - клонировать репозиторий на свое устройство
 2. `cd store-page-class` - перейти в папку store-page-class
 3. `npm i` - установить зависимости
 4. `npm run start` - запустить приложение в режиме разработчика
